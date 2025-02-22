@@ -1,0 +1,409 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s ease;
+}
+
+/* Form Section */
+.form-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block; /* Ensures the label stays above */
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px; /* Space between label and input */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styles */
+button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Feedback Messages */
+.feedback {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.feedback.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.feedback.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+
+/* Text Input and Textarea Styles */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added animation on focus */
+    position: relative;
+    z-index: 1;
+}
+
+/* Glowing effect on focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Shadow when focused */
+    outline: none;
+    border-color: #007bff; /* Border color when focused */
+}
+
+/* Label Positioning */
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px; /* Position label above the input */
+    font-size: 1rem;
+    color: #888;
+    pointer-events: none;
+    transition: 0.3s ease, transform 0.3s ease; /* Added transition */
+    background-color: white;
+    padding: 0 5px;
+}
+
+/* Floating label when input is focused or has value */
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 0.9rem;
+    color: #007bff;
+    transform: translateY(-10px) scale(0.9); /* Floating effect */
+}
+
+/* Button */
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05); /* Button scale effect */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Feedback Styles */
+.feedback {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for feedback */
+}
+
+.feedback.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.feedback.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Space between logo and button */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Buy Now Button */
+.buy-now {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: auto; /* Pushes button to the right */
+}
+
+.buy-now:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    overflow: hidden;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content {
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards 0.5s;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards 1s;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 2s;
+}
+
+/* Features Section */
+.features {
+    padding: 40px 20px;
+    background-color: white;
+    animation: fadeIn 2s ease-out;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.feature {
+    flex: 5;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery Section */
+.gallery {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Pricing Section */
+.pricing-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.pricing-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+/* Buy Now button */
+.buy-now {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+/* Learn More button */
+.cta-button {
+    background: #34eb92;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.cta-button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
